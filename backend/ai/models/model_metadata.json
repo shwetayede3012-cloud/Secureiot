@@ -1,0 +1,67 @@
+{
+  "model_type": "RandomForestClassifier",
+  "library": "scikit-learn",
+  "n_estimators": 100,
+  "max_depth": 10,
+  "feature_names": [
+    "device_trust",
+    "failed_attempts",
+    "request_frequency",
+    "network_anomaly",
+    "time_anomaly",
+    "previous_behavior"
+  ],
+  "class_names": [
+    "HIGH_RISK",
+    "NORMAL",
+    "SUSPICIOUS"
+  ],
+  "test_accuracy": 1.0,
+  "test_samples": 600,
+  "total_samples": 3000,
+  "feature_importances": {
+    "device_trust": 0.3267,
+    "failed_attempts": 0.0011,
+    "request_frequency": 0.2307,
+    "network_anomaly": 0.1553,
+    "time_anomaly": 0.1359,
+    "previous_behavior": 0.1504
+  },
+  "dataset_path": "/app/applet/backend/ai/data/iot_security_synthetic_dataset.csv",
+  "model_path": "/app/applet/backend/ai/models/rf_model.joblib",
+  "synthetic_data": true,
+  "data_notice": "Trained on synthetic IoT behavioral telemetry (no physical IoT hardware claim)",
+  "classification_report": {
+    "HIGH_RISK": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 200
+    },
+    "NORMAL": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 200
+    },
+    "SUSPICIOUS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 200
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 600
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 600
+    }
+  }
+}

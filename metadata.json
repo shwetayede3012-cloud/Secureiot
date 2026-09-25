@@ -1,0 +1,7 @@
+{
+  "name": "SecureIoT AI",
+  "description": "AI-Driven Adaptive Access Control for Blockchain-Based IoT Networks with real-time risk evaluation, smart contracts, and simulated device behavior.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

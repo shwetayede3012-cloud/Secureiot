@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0b0d11;
+    color: #e4e4e7;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-display {
+    font-family: 'Chakra Petch', sans-serif;
+  }
+}
+
+/* Industrial SOC Defense grid */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(245, 158, 11, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 158, 11, 0.04) 1px, transparent 1px);
+}
+
+.cyber-grid-dense {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(217, 119, 6, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 119, 6, 0.05) 1px, transparent 1px);
+}
+
+/* Glassmorphism card styles - Industrial Carbon & Amber */
+.glass-panel {
+  background: rgba(17, 19, 24, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(245, 158, 11, 0.38);
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.2);
+}
+
+.glass-panel-glow {
+  box-shadow: 0 0 20px -2px rgba(245, 158, 11, 0.18);
+}
+
+/* Glowing text and borders */
+.glow-amber {
+  text-shadow: 0 0 12px rgba(245, 158, 11, 0.65);
+}
+
+.glow-gold {
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.65);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+}
+
+.glow-purple {
+  text-shadow: 0 0 12px rgba(217, 119, 6, 0.6);
+}
+
+.glow-green {
+  text-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
+}
+
+.glow-red {
+  text-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+}
+
+/* Custom cyber scrollbars - Industrial Zinc/Amber */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090a0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* ========================================================================= */
+/* SOFT WHITE INNER DASHBOARD THEME ("thoda white")                         */
+/* ========================================================================= */
+.dashboard-light {
+  background-color: #f4f6fa !important;
+  color: #0f172a !important;
+}
+
+/* Workspace main background */
+.dashboard-light .dashboard-workspace,
+.dashboard-light main {
+  background-color: #f4f6fa !important;
+  color: #0f172a !important;
+}
+
+/* Cards & Containers: turn deep navy #001032 cards into clean white cards */
+.dashboard-light [class*="001032"] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03) !important;
+  color: #0f172a !important;
+}
+
+/* Sub-containers & panels: turn midnight #000028 into soft slate #f8fafc */
+.dashboard-light [class*="000028"] {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Subtle borders & dividers */
+.dashboard-light [class*="border-white/"] {
+  border-color: #e2e8f0 !important;
+}
+.dashboard-light [class*="divide-white/"] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #f1f5f9 !important;
+}
+
+/* Headings & general text */
+.dashboard-light h1,
+.dashboard-light h2,
+.dashboard-light h3,
+.dashboard-light h4,
+.dashboard-light h5 {
+  color: #0f172a !important;
+}
+
+.dashboard-light .text-white {
+  color: #0f172a !important;
+}
+
+.dashboard-light .text-slate-300,
+.dashboard-light .text-slate-200 {
+  color: #334155 !important;
+}
+
+.dashboard-light .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* Improve cyan readability on white background */
+.dashboard-light .text-\[\#00e5ff\] {
+  color: #00646e !important;
+}
+
+.dashboard-light svg.text-\[\#00e5ff\] {
+  color: #00828f !important;
+}
+
+/* Keep crisp white text on primary buttons */
+.dashboard-light button.bg-\[\#00646e\],
+.dashboard-light button.bg-\[\#00828f\],
+.dashboard-light [class*="bg-[#00646e]"],
+.dashboard-light [class*="bg-[#00828f]"] {
+  color: #ffffff !important;
+}
+
+.dashboard-light [class*="bg-[#00646e]"] span,
+.dashboard-light [class*="bg-[#00828f]"] span,
+.dashboard-light [class*="bg-[#00646e]"] svg,
+.dashboard-light [class*="bg-[#00828f]"] svg {
+  color: #ffffff !important;
+}
+
+/* Secondary ghost buttons */
+.dashboard-light button[class*="bg-white/10"],
+.dashboard-light button[class*="bg-white/15"],
+.dashboard-light div[class*="bg-white/10"] {
+  background-color: #e2e8f0 !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Inputs, textareas & selects */
+.dashboard-light input,
+.dashboard-light select,
+.dashboard-light textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.dashboard-light input::placeholder,
+.dashboard-light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.dashboard-light input:focus,
+.dashboard-light select:focus,
+.dashboard-light textarea:focus {
+  border-color: #00646e !important;
+  background-color: #ffffff !important;
+}
+
+/* Tables */
+.dashboard-light thead tr,
+.dashboard-light thead th {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.dashboard-light tbody tr:hover {
+  background-color: #f8fafc !important;
+}
+
+.dashboard-light tbody td {
+  border-color: #f1f5f9 !important;
+  color: #1e293b !important;
+}
+
+/* Status Badges in Light Mode */
+.dashboard-light [class*="bg-emerald-950"] {
+  background-color: #ecfdf5 !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+}
+
+.dashboard-light [class*="bg-amber-950"] {
+  background-color: #fffbeb !important;
+  color: #b45309 !important;
+  border-color: #fde68a !important;
+}
+
+.dashboard-light [class*="bg-rose-950"] {
+  background-color: #fff1f2 !important;
+  color: #be123c !important;
+  border-color: #fecdd3 !important;
+}
+
+/* Sidebar in light mode */
+.dashboard-light aside {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+.dashboard-light aside [class*="text-slate-300"],
+.dashboard-light aside [class*="text-slate-400"] {
+  color: #475569 !important;
+}
+
+.dashboard-light aside button:not([class*="bg-[#00646e]"]):hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.dashboard-light aside [class*="001032"] {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
